@@ -1,0 +1,23 @@
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EdgeUI
+
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EdgeUI /t reg_BINARY /d 0
+
+#reg ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\DisplayDisabled
+
+#reg ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\DisplayDisabled /t reg_BINARY /d 0
+
+#reg ADD HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /t reg_BINARY /d 0
+
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /t reg_BINARY /d 0
+
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsNT\CurrentVersion\Winlogon\AutoAdminLogon
+
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsNT\CurrentVersion\Winlogon\AutoAdminLogon /t reg_BINARY /d 1
+
+#$c = Get-Credential -Message "Please enter you kiosk admin login or current login details" credential Admin
+#$c.Username
+#$c.Password
+
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsNT\CurrentVersion\Winlogon\DefaultUserName /t reg_MULTI_SZ /d $c.Username
+
+#reg ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsNT\CurrentVersion\Winlogon\DefaultPassword /t reg_MULTI_SZ /d $c.Password

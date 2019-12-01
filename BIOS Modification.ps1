@@ -1,0 +1,7 @@
+	
+
+Get-WmiObject -Namespace root/dell/instrumentedBIOS -Class dell_biosEnumeration
+
+Get-WmiObject -Namespace root\cimv2 -Class CIM_BIOSElement
+
+Get-WmiObject -Namespace root\cimv2 -Class Win32_SMBIOSMemory
